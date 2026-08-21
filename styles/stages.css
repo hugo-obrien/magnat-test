@@ -1,0 +1,196 @@
+/* ===== СЕКЦИЯ ЭТАПЫ ===== */
+
+/* Специфичные стили для этапов */
+.stage {
+    grid-template-columns: 144px 357px 1fr;
+    gap: 97px;
+}
+
+/* Бейдж */
+.stage__badge {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 10px;
+    width: 144px;
+    height: 52px;
+    border: 3px solid #90FF0F;
+    border-radius: 32px;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    flex: none;
+    flex-grow: 0;
+    white-space: nowrap;
+}
+
+.stage__badge--accent {
+    color: var(--accent);
+}
+
+.stage__date {
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--text-muted);
+}
+
+.stage__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--text);
+    text-align: left;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 1800px) {
+    .stage { gap: 70px; }
+}
+
+@media (max-width: 1560px) {
+    .stage {
+        grid-template-columns: 120px 280px 1fr;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .stage {
+        grid-template-columns: 120px 220px 1fr;
+        gap: 40px;
+    }
+    .stage__badge {
+        width: 120px;
+        height: 48px;
+        padding: 14px 20px;
+        font-size: 14px;
+        border-radius: 28px;
+    }
+    .stage__title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .stage__date { font-size: 14px; }
+}
+
+@media (max-width: 1280px) {
+    .stage {
+        grid-template-columns: 100px 180px 1fr;
+        gap: 25px;
+        padding: 20px 0;
+    }
+    .stage__badge {
+        width: 100px;
+        height: 44px;
+        padding: 12px 16px;
+        font-size: 13px;
+        border-radius: 24px;
+        border-width: 2px;
+    }
+    .stage__date { font-size: 13px; }
+    .stage__title {
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .stage {
+        grid-template-columns: 80px 150px 1fr;
+        gap: 16px;
+    }
+    .stage__badge {
+        width: 80px;
+        height: 40px;
+        padding: 10px 12px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+    .stage__date { font-size: 12px; }
+    .stage__title {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .stage {
+        grid-template-columns: 100px 1fr 1fr;
+        gap: 20px;
+        padding: 16px 0;
+    }
+    .stage__badge {
+        width: 100px;
+        height: 44px;
+        padding: 12px 16px;
+        font-size: 13px;
+        border-radius: 24px;
+        border-width: 2px;
+    }
+    .stage__date { font-size: 13px; }
+    .stage__title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stage {
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: auto auto;
+        gap: 8px 12px;
+        padding: 12px 0;
+    }
+    .stage__badge {
+        grid-row: span 2;
+        width: 80px;
+        height: 40px;
+        padding: 10px 12px;
+        font-size: 12px;
+        border-radius: 20px;
+        border-width: 2px;
+        align-self: center;
+    }
+    .stage__date {
+        font-size: 12px;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .stage__title {
+        font-size: 14px;
+        line-height: 18px;
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .stage__title br { display: none; }
+}
+
+@media (max-width: 480px) {
+    .stage {
+        grid-template-columns: 60px 1fr;
+        gap: 4px 10px;
+        padding: 10px 0;
+    }
+    .stage__badge {
+        padding: 8px 10px;
+        width: 60px;
+        height: 32px;
+        font-size: 10px;
+        border-radius: 16px;
+        border-width: 2px;
+        align-self: center;
+    }
+    .stage__date { font-size: 10px; line-height: 1.4; }
+    .stage__title {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

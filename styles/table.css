@@ -1,0 +1,118 @@
+/* ===== ОБЩИЕ СТИЛИ ДЛЯ ТАБЛИЧНЫХ БЛОКОВ ===== */
+
+/* Общий контейнер для блока с заголовком и таблицей */
+.table-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: flex-start;
+}
+
+.table-wrap .section__title {
+    width: 223px;
+    flex-shrink: 0;
+    min-width: 223px;
+    white-space: nowrap;
+}
+
+/* Таблица (контейнер с рядами) */
+.table {
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+/* Ряд таблицы с градиентным border */
+.table-row {
+    display: grid;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid;
+    border-image-source: linear-gradient(90deg, #90FF0F 0%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 1800px) {
+    .table-wrap { gap: 80px; }
+    .table { max-width: 950px; }
+}
+
+@media (max-width: 1560px) {
+    .table-wrap { gap: 60px; }
+    .table { max-width: 850px; }
+}
+
+@media (max-width: 1440px) {
+    .table-wrap { gap: 50px; }
+    .table-wrap .section__title {
+        width: 180px;
+        min-width: 180px;
+        font-size: 36px;
+        line-height: 46px;
+    }
+    .table { max-width: 750px; }
+}
+
+@media (max-width: 1280px) {
+    .table-wrap { gap: 40px; }
+    .table-wrap .section__title {
+        width: 160px;
+        min-width: 160px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .table { max-width: 650px; }
+}
+
+@media (max-width: 1150px) {
+    .table-wrap { gap: 30px; }
+    .table-wrap .section__title {
+        width: 140px;
+        min-width: 140px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .table { max-width: 550px; }
+}
+
+@media (max-width: 1060px) {
+    .table-wrap {
+        flex-direction: column;
+        gap: 24px;
+        align-items: stretch;
+    }
+    .table-wrap .section__title {
+        width: 100%;
+        min-width: unset;
+        white-space: normal;
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .table { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .table-wrap { gap: 20px; }
+    .table-wrap .section__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .table-row { padding: 16px 0; }
+}
+
+@media (max-width: 480px) {
+    .table-wrap { gap: 16px; }
+    .table-wrap .section__title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .table-row { padding: 12px 0; }
+}

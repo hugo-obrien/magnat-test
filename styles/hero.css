@@ -1,0 +1,303 @@
+/* ===== HERO ===== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 100vh;
+    overflow: hidden;
+    padding-top: calc(var(--header-height) + 30px);
+}
+
+.hero__inner {
+    position: relative;
+    width: 100%;
+    padding: 0 130px;
+}
+
+/* Заголовок */
+.hero__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text);
+    max-width: 1659px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hero__title-text {
+    font-size: 62px;
+    line-height: 77px;
+}
+
+.hero__title-text span {
+    color: var(--accent);
+}
+
+.hero__title-year {
+    font-size: 124px;
+    line-height: 1.2;
+    color: var(--text);
+    margin-top: -10px;
+}
+
+/* Декоративный луч - как было изначально */
+.hero__beam {
+    position: absolute;
+    width: 1200px;
+    height: 1200px;
+    right: -100px;
+    bottom: 50px;
+    background: url('../assets/hero-bg.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+/* Блок со сроками */
+.hero__deadline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 24px;
+    width: 100%;
+    max-width: 616px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border: 3px solid var(--accent);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: var(--radius-lg);
+    position: relative;
+    z-index: 2;
+}
+
+.hero__deadline-title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--text);
+}
+
+.hero__deadline-dates {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--text);
+}
+
+.hero__countdown {
+    font-size: 12px;
+    color: var(--text);
+    opacity: 0.6;
+}
+
+.progress {
+    position: relative;
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.progress__bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+    border-radius: var(--radius-md);
+}
+
+/* Кнопка в hero - под дедлайном, такой же ширины */
+.btn-apply--hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 10px;
+    width: 100%;
+    max-width: 616px;
+    height: 79px;
+    background: #90FF0F;
+    border-radius: 32px;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    color: #000000;
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.btn-apply--hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(144, 255, 15, 0.4);
+}
+
+/* Градиентные плашки - во всю ширину экрана с отступами */
+.nominations-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    width: calc(100% + 260px);
+    margin-left: -130px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+}
+
+.nom-chip {
+    padding: 14px 40px;
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #000;
+    width: 100%;
+}
+
+.nom-chip--pink {
+    background: linear-gradient(90deg, rgba(238,162,252,0.5) 0%, #EEA2FC 33%, rgba(144,255,15,0) 100%);
+}
+.nom-chip--green {
+    background: linear-gradient(90deg, rgba(144,255,15,0) 0%, #90FF0F 72%, #90FF0F 100%);
+    text-align: right;
+}
+.nom-chip--cyan {
+    background: linear-gradient(90deg, #3FFDFF 0%, #3FFDFF 26%, rgba(63,253,255,0) 100%);
+}
+.nom-chip--orange {
+    background: linear-gradient(90deg, rgba(236,158,100,0) 0%, #EC9E64 35%, #EC9E64 60%, rgba(236,158,100,0.8) 100%);
+    text-align: right;
+}
+.nom-chip--yellow {
+    background: linear-gradient(90deg, #FDFA56 0%, #FDFA56 48%, rgba(144,255,15,0) 100%);
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 1800px) {
+    .hero__inner { padding: 0 60px; }
+    .hero__title-text { font-size: 52px; line-height: 64px; }
+    .hero__title-year { font-size: 104px; }
+    .nom-chip { font-size: 40px; line-height: 50px; padding: 12px 32px; }
+    .hero__beam { width: 1000px; height: 1000px; right: -80px; }
+    .nominations-preview {
+        width: calc(100% + 120px);
+        margin-left: -60px;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .hero__inner { padding: 0 40px; }
+    .hero__title-text { font-size: 44px; line-height: 54px; }
+    .hero__title-year { font-size: 88px; }
+    .hero__deadline { padding: 32px; }
+    .hero__deadline-title,
+    .hero__deadline-dates { font-size: 26px; }
+    .btn-apply--hero { height: 68px; font-size: 20px; }
+    .nom-chip { font-size: 34px; line-height: 44px; padding: 10px 28px; }
+    .hero__beam { width: 800px; height: 800px; right: -60px; bottom: 100px; }
+    .nominations-preview {
+        width: calc(100% + 80px);
+        margin-left: -40px;
+        padding: 0 12px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .hero__inner { padding: 0 30px; }
+    .hero__title-text { font-size: 36px; line-height: 44px; }
+    .hero__title-year { font-size: 72px; }
+    .hero__deadline { padding: 24px; gap: 16px; max-width: 500px; }
+    .hero__deadline-title,
+    .hero__deadline-dates { font-size: 22px; }
+    .btn-apply--hero { max-width: 500px; height: 60px; font-size: 18px; padding: 12px 20px; }
+    .nom-chip { font-size: 28px; line-height: 36px; padding: 8px 24px; }
+    .hero__beam { width: 650px; height: 650px; right: -50px; bottom: 120px; }
+    .nominations-preview {
+        width: calc(100% + 60px);
+        margin-left: -30px;
+        padding: 0 10px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero__inner { padding: 0 20px; }
+    .hero {
+        padding-top: calc(var(--header-height) + 40px);
+    }
+    .hero__title-text { font-size: 30px; line-height: 38px; }
+    .hero__title-year { font-size: 60px; }
+    .hero__deadline { max-width: 100%; padding: 24px; }
+    .btn-apply--hero { max-width: 100%; height: 60px; font-size: 18px; }
+    .nom-chip { font-size: 22px; line-height: 30px; padding: 6px 16px; }
+    .hero__beam { width: 500px; height: 500px; right: -40px; bottom: 100px; opacity: 0.5; }
+    .nominations-preview {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        padding: 0 8px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__inner { padding: 0 16px; }
+    .hero {
+        padding-top: calc(var(--header-height) + 24px);
+    }
+    .hero__title-text { font-size: 22px; line-height: 30px; }
+    .hero__title-year { font-size: 44px; }
+    .hero__deadline { padding: 20px; gap: 12px; }
+    .hero__deadline-title,
+    .hero__deadline-dates { font-size: 18px; }
+    .hero__countdown { font-size: 10px; }
+    .btn-apply--hero { height: 50px; font-size: 16px; padding: 10px 16px; border-radius: var(--radius-md); }
+    .nom-chip { font-size: 16px; line-height: 22px; padding: 4px 12px; border-radius: 20px; }
+    .hero__beam { width: 350px; height: 350px; right: -30px; bottom: 80px; opacity: 0.3; }
+    .nominations-preview {
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        padding: 0 6px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__inner { padding: 0 12px; }
+    .hero {
+        padding-top: calc(var(--header-height) + 16px);
+    }
+    .hero__title-text { font-size: 18px; line-height: 24px; }
+    .hero__title-year { font-size: 36px; }
+    .hero__deadline { padding: 16px; gap: 8px; border-radius: 20px; }
+    .hero__deadline-title,
+    .hero__deadline-dates { font-size: 14px; }
+    .btn-apply--hero { height: 44px; font-size: 14px; padding: 8px 12px; border-radius: 20px; margin-top: 24px; }
+    .nom-chip { font-size: 12px; line-height: 16px; padding: 4px 10px; border-radius: 16px; }
+    .nominations-preview {
+        gap: 4px;
+        width: calc(100% + 24px);
+        margin-left: -12px;
+        padding: 0 4px;
+        margin-top: 24px;
+    }
+    .progress { height: 8px; }
+    .hero__beam { width: 250px; height: 250px; right: -20px; bottom: 60px; opacity: 0.2; }
+}

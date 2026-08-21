@@ -1,0 +1,189 @@
+/* ===== СЕКЦИЯ О КОНКУРСЕ ===== */
+
+.about-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: flex-start;
+}
+
+.about-wrap .section__title {
+    width: 223px;
+    flex-shrink: 0;
+    min-width: 223px;
+    white-space: nowrap;
+}
+
+.about {
+    width: 1100px; /* увеличено с 1096px до 1100px */
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.about__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--text);
+    margin-bottom: 24px;
+}
+
+.about__text:last-of-type {
+    margin-bottom: 40px;
+}
+
+/* Кнопка в about */
+.btn-apply--about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 10px;
+    width: 100%;
+    max-width: 616px;
+    height: 79px;
+    background: #90FF0F;
+    border-radius: 32px;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    color: #000000;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.btn-apply--about:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(144, 255, 15, 0.4);
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 1800px) {
+    .about-wrap { gap: 80px; }
+    .about { max-width: 950px; }
+}
+
+@media (max-width: 1560px) {
+    .about-wrap { gap: 60px; }
+    .about { max-width: 850px; }
+    .about__text { font-size: 15px; }
+}
+
+@media (max-width: 1440px) {
+    .about-wrap { gap: 50px; }
+    .about-wrap .section__title {
+        width: 180px;
+        min-width: 180px;
+        font-size: 36px;
+        line-height: 46px;
+    }
+    .about { max-width: 750px; }
+    .about__text { font-size: 14px; }
+    .btn-apply--about {
+        max-width: 500px;
+        height: 68px;
+        font-size: 20px;
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .about-wrap { gap: 40px; }
+    .about-wrap .section__title {
+        width: 160px;
+        min-width: 160px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .about { max-width: 650px; }
+    .about__text { font-size: 13px; }
+    .btn-apply--about {
+        max-width: 420px;
+        height: 60px;
+        font-size: 18px;
+        padding: 12px 20px;
+        border-radius: 28px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .about-wrap { gap: 30px; }
+    .about-wrap .section__title {
+        width: 140px;
+        min-width: 140px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .about { max-width: 550px; }
+}
+
+@media (max-width: 1060px) {
+    .about-wrap {
+        flex-direction: column;
+        gap: 24px;
+        align-items: stretch;
+    }
+    .about-wrap .section__title {
+        width: 100%;
+        min-width: unset;
+        white-space: normal;
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .about { max-width: 100%; }
+    .about__text { font-size: 14px; }
+    .btn-apply--about {
+        max-width: 100%;
+        height: 60px;
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-wrap { gap: 20px; }
+    .about-wrap .section__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .about__text {
+        font-size: 13px;
+        margin-bottom: 16px;
+        line-height: 150%;
+    }
+    .about__text:last-of-type {
+        margin-bottom: 30px;
+    }
+    .btn-apply--about {
+        height: 50px;
+        font-size: 16px;
+        padding: 10px 16px;
+        border-radius: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-wrap { gap: 16px; }
+    .about-wrap .section__title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .about__text {
+        font-size: 12px;
+        margin-bottom: 12px;
+        line-height: 145%;
+    }
+    .about__text:last-of-type {
+        margin-bottom: 24px;
+    }
+    .btn-apply--about {
+        height: 44px;
+        font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 20px;
+    }
+}

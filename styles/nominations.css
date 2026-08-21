@@ -1,0 +1,215 @@
+/* ===== СЕКЦИЯ НОМИНАЦИИ ===== */
+
+/* Специфичные стили для номинаций */
+.nomination {
+    grid-template-columns: 1fr 1fr auto;
+    gap: 40px;
+}
+
+.nomination__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+.nomination__desc {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--text-muted);
+}
+
+/* Кнопка в номинации */
+.btn-apply--nom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 10px;
+    width: 280px;
+    height: 78px;
+    background: #90FF0F;
+    border-radius: 32px;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #150042;
+    transition: transform .2s, box-shadow .2s;
+    flex-shrink: 0;
+}
+
+.btn-apply--nom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(144, 255, 15, 0.4);
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 1800px) {
+    .nomination {
+        gap: 30px;
+    }
+    .btn-apply--nom {
+        width: 240px;
+        height: 68px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 1560px) {
+    .nomination {
+        gap: 24px;
+    }
+    .nomination__title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .nomination__desc {
+        font-size: 14px;
+    }
+    .btn-apply--nom {
+        width: 200px;
+        height: 60px;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .nomination {
+        gap: 20px;
+    }
+    .nomination__title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .btn-apply--nom {
+        width: 180px;
+        height: 56px;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 10px 16px;
+        border-radius: 28px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .nomination {
+        gap: 16px;
+        padding: 20px 0;
+    }
+    .nomination__title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .nomination__desc {
+        font-size: 13px;
+    }
+    .btn-apply--nom {
+        width: 160px;
+        height: 50px;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 8px 12px;
+        border-radius: 24px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .nomination {
+        gap: 12px;
+    }
+    .nomination__title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .nomination__desc {
+        font-size: 12px;
+    }
+    .btn-apply--nom {
+        width: 140px;
+        height: 44px;
+        font-size: 13px;
+        line-height: 16px;
+        padding: 6px 10px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .nomination {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 12px;
+        padding: 20px 0;
+    }
+    .nomination__title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .nomination__desc {
+        font-size: 14px;
+        max-width: 100%;
+    }
+    .btn-apply--nom {
+        width: 100%;
+        max-width: 360px;
+        height: 56px;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 16px 0;
+        border-radius: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nomination {
+        gap: 8px;
+        padding: 16px 0;
+    }
+    .nomination__title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .nomination__desc {
+        font-size: 13px;
+        line-height: 150%;
+    }
+    .btn-apply--nom {
+        height: 48px;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 12px 0;
+        border-radius: 24px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nomination {
+        gap: 6px;
+        padding: 12px 0;
+    }
+    .nomination__title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .nomination__desc {
+        font-size: 12px;
+        line-height: 145%;
+    }
+    .btn-apply--nom {
+        height: 44px;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 10px 0;
+        border-radius: 20px;
+        max-width: 100%;
+    }
+}

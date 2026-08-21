@@ -1,0 +1,209 @@
+/* ===== ШАПКА ===== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    z-index: 100;
+}
+
+.header__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 30px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* Логотип */
+.header__contest-logo {
+    width: 209px;
+    height: 52px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header__contest-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Блок "При поддержке" */
+.header__support-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: rgba(21, 0, 66, 0.1);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+}
+
+.header__sponsor {
+    height: 32px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.header__support {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--text);
+    flex-shrink: 0;
+}
+
+/* Навбар */
+.nav {
+    display: flex;
+    gap: 24px;
+    padding: 12px 20px;
+    background: rgba(21, 0, 65, 0.1);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+}
+
+.nav a {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text);
+    transition: color .2s;
+    white-space: nowrap;
+}
+
+.nav a:hover { color: var(--accent); }
+
+/* Кнопка "Подать заявку" */
+.btn-apply--corner {
+    height: 100%;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: 0 0 8px rgba(21, 0, 66, 0.5);
+    transition: transform .2s, box-shadow .2s;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.btn-apply--corner:hover {
+    transform: translateY(2px);
+    box-shadow: 0 4px 16px rgba(144, 255, 15, 0.4);
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 1800px) {
+    .header__support-block {
+        padding: 10px 16px;
+        gap: 10px;
+    }
+    .header__support { font-size: 14px; }
+    .nav { gap: 18px; padding: 10px 16px; }
+    .nav a { font-size: 14px; }
+    .btn-apply--corner {
+        width: 180px;
+        font-size: 18px;
+        padding: 12px 20px;
+        border-radius: 0 0 28px 28px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .header__inner { padding: 0 20px; gap: 12px; }
+    .header__contest-logo { width: 160px; height: 42px; }
+    .header__support-block {
+        padding: 8px 14px;
+        gap: 8px;
+        border-radius: var(--radius-md);
+    }
+    .header__support { font-size: 12px; }
+    .header__sponsor { height: 24px; }
+    .nav {
+        gap: 14px;
+        padding: 8px 14px;
+        border-radius: var(--radius-md);
+    }
+    .nav a { font-size: 13px; }
+    .btn-apply--corner {
+        width: 150px;
+        font-size: 16px;
+        padding: 10px 16px;
+        border-radius: 0 0 var(--radius-md) var(--radius-md);
+    }
+}
+
+@media (max-width: 1280px) {
+    .header__support-block { display: none; }
+    .header__inner { padding: 0 16px; gap: 10px; }
+    .header__contest-logo { width: 140px; height: 36px; }
+    .nav { gap: 12px; padding: 8px 12px; }
+    .nav a { font-size: 12px; }
+    .btn-apply--corner {
+        width: 130px;
+        font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 0 0 20px 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav a:not(:first-child):not(:nth-child(2)) { display: none; }
+    .header__contest-logo { width: 120px; height: 32px; }
+    .nav { gap: 8px; padding: 6px 10px; border-radius: 16px; }
+    .nav a { font-size: 11px; }
+    .btn-apply--corner {
+        width: 110px;
+        font-size: 12px;
+        padding: 6px 10px;
+        border-radius: 0 0 16px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__inner { padding: 0 12px; gap: 6px; }
+    .header__contest-logo { width: 100px; height: 28px; }
+    .nav a:not(:first-child) { display: none; }
+    .nav { padding: 4px 10px; border-radius: 12px; gap: 4px; }
+    .nav a { font-size: 10px; }
+    .btn-apply--corner {
+        width: 90px;
+        font-size: 10px;
+        padding: 4px 8px;
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__inner { padding: 0 8px; gap: 4px; }
+    .header__contest-logo { width: 80px; height: 24px; }
+    .nav { display: none; }
+    .btn-apply--corner {
+        width: 72px;
+        font-size: 8px;
+        padding: 4px 6px;
+        border-radius: 0 0 8px 8px;
+    }
+}

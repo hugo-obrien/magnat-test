@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Конкурс лучших брендов гастроиндустрии Санкт-Петербурга 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/organizers.css" />
+
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+
+    <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/stages.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/nominations.css" />
+    <link rel="stylesheet" href="styles/table.css" />
+    <link rel="stylesheet" href="styles/prizes.css" />
+    <link rel="stylesheet" href="styles/faq.css" />
+
+    <link rel="stylesheet" href="styles/popup.css" />
+</head>
+<body>
+
+<script src="scripts/faq.js"></script>
+<script src="scripts/popup.js"></script>
+<script src="scripts/deadline.js"></script>
+
+<header class="header">
+    <div class="header__inner">
+        <a href="#" class="header__contest-logo" aria-label="Конкурс лучших брендов гастроиндустрии">
+            <img src="assets/logo-contest.svg" alt="Логотип конкурса" class="header__contest-logo-img" />
+        </a>
+
+        <div class="header__support-block">
+            <div class="header__support">ПРИ<br>ПОДДЕРЖКЕ</div>
+            <img src="assets/sup-1.svg" alt="Спонсор 1" class="header__sponsor" />
+            <img src="assets/sup-2.svg" alt="Спонсор 2" class="header__sponsor" />
+        </div>
+
+        <nav class="nav">
+            <a href="#about">О конкурсе</a>
+            <a href="#nominations">Номинации</a>
+            <a data-popup="popup-conditions">Условия участия</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+
+        <a class="btn-apply--corner" data-popup="application-popup">Подать заявку</a>
+    </div>
+</header>
+
+<main>
+    <section id="main" class="hero">
+        <div class="hero__inner">
+            <h1 class="hero__title">
+                <span class="hero__title-text">
+                    Конкурс лучших брендов<br>
+                    гастроиндустрии Санкт-Петербурга
+                </span>
+                <span class="hero__title-year">2026</span>
+            </h1>
+
+            <div class="hero__beam" aria-hidden="true"></div>
+
+            <div class="hero__deadline">
+                <div class="hero__deadline-title">Дедлайн:</div>
+                <div class="hero__deadline-dates">
+                    18 АВГУСТА — 21 СЕНТЯБРЯ 2026
+                </div>
+                <div class="hero__countdown">
+                    Осталось 45 дней 12 часов
+                </div>
+                <div class="progress">
+                    <div class="progress__bar" style="width: 60%;"></div>
+                </div>
+            </div>
+
+            <a class="btn-apply--hero" data-popup="application-popup">Подать заявку</a>
+
+            <div class="nominations-preview">
+                <div class="nom-chip nom-chip--pink">ЛУЧШИЙ РЕСТОРАН</div>
+                <div class="nom-chip nom-chip--green">ЛУЧШИЙ ШЕФ-ПОВАР</div>
+                <div class="nom-chip nom-chip--cyan">ЛУЧШИЙ БАР</div>
+                <div class="nom-chip nom-chip--orange">ЛУЧШИЙ СЕРВИС</div>
+                <div class="nom-chip nom-chip--yellow">ВЫБОР ПОСЕТИТЕЛЕЙ</div>
+            </div>
+        </div>
+    </section>
+
+    <<section id="stages" class="section">
+    <div class="section__inner stages-wrap table-wrap">
+        <h2 class="section__title">Этапы</h2>
+        <div class="stages table">
+
+            <div class="stage table-row">
+                <div class="stage__badge">Онлайн</div>
+                <div class="stage__date">14 сентября 2025 – 21 октября 2025</div>
+                <div class="stage__title">Сбор заявок</div>
+            </div>
+
+            <div class="stage table-row">
+                <div class="stage__badge">Онлайн</div>
+                <div class="stage__date">26 октября 2025 – 3 ноября 2025</div>
+                <div class="stage__title">Открытое голосование<br>на официальном сайте<br>конкурса</div>
+            </div>
+
+            <div class="stage table-row">
+                <div class="stage__badge">Онлайн</div>
+                <div class="stage__date">26 октября 2025 – 3 ноября 2025</div>
+                <div class="stage__title">Голосование конкурсной комиссии</div>
+            </div>
+
+            <div class="stage table-row">
+                <div class="stage__badge stage__badge--accent">Очно</div>
+                <div class="stage__date">11 ноября 2025</div>
+                <div class="stage__title">Объявление победителей</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="section">
+        <div class="section__inner about-wrap">
+            <h2 class="section__title">О конкурсе</h2>
+            <div class="about">
+                <p class="about__text">
+                    Конкурс лучших брендов гастроиндустрии Санкт-Петербурга — это масштабная инициатива, направленная на
+                    поддержку и продвижение малого и среднего бизнеса в сфере ресторанов, кафе, баров и производителей
+                    продуктов питания. Организованный Фондом развития субъектов малого и среднего предпринимательства
+                    Санкт-Петербурга и оператором ООО «Центр развития промышленности и инноваций», конкурс предоставляет
+                    участникам уникальную возможность заявить о себе, укрепить позиции на рынке и получить мощные инструменты
+                    для продвижения.
+                </p>
+                <p class="about__text">
+                    Участие в конкурсе бесплатное и добровольное, что делает его доступным для всех субъектов малого и
+                    среднего предпринимательства, соответствующих требованиям. Чёткие критерии оценки и открытая система
+                    голосования (онлайн-голосование и решение жюри) обеспечивают прозрачность и доверие к результатам.
+                </p>
+                <p class="about__text">
+                    Победители получают не только престижную награду, но и значительную медийную поддержку: продвижение
+                    в городском пространстве, публикации в СМИ, трансляции в эфире на телевидении и радио.
+                </p>
+                <p class="about__text">
+                    В состав жюри входят представители органов власти, институтов развития и признанные эксперты
+                    ресторанного бизнеса и гастрономической культуры, что гарантирует высокий уровень оценки и объективность.
+                </p>
+                <a class="btn-apply--about" data-popup="popup-conditions">Подробные условия участия</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="nominations" class="section">
+        <div class="section__inner nominations-wrap table-wrap">
+            <h2 class="section__title">Номинации</h2>
+            <div class="nominations table">
+                <div class="nomination table-row">
+                    <div class="nomination__title">Лучший кондитерский бренд</div>
+                    <p class="nomination__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a class="btn-apply--nom" data-popup="application-popup">Подать заявку</a>
+                </div>
+                <div class="nomination table-row">
+                    <div class="nomination__title">Лучшая кофейня</div>
+                    <p class="nomination__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a class="btn-apply--nom" data-popup="application-popup">Подать заявку</a>
+                </div>
+                <div class="nomination table-row">
+                    <div class="nomination__title">Лучший стрит-фуд</div>
+                    <p class="nomination__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a class="btn-apply--nom" data-popup="application-popup">Подать заявку</a>
+                </div>
+                <div class="nomination table-row">
+                    <div class="nomination__title">Открытие года</div>
+                    <p class="nomination__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                    <a class="btn-apply--nom" data-popup="application-popup">Подать заявку</a>
+                </div>
+                <div class="nomination table-row">
+                    <div class="nomination__title">Молодой ресторатор</div>
+                    <p class="nomination__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                    <a class="btn-apply--nom" data-popup="application-popup">Подать заявку</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prizes" class="section">
+        <div class="section__inner prizes-wrap">
+            <h2 class="section__title">Призы</h2>
+            <div class="prizes">
+                <div class="prize-card">
+                    <h3 class="prize-card__title">1 место</h3>
+                    <ul class="prize-list">
+                        <li class="prize-list__item">Сюжет о бренде на одном из ведущих телеканалов Санкт-Петербурга</li>
+                        <li class="prize-list__item">Упоминание бренда в социальных сетях профильного блогера и/или крупном тематическом паблике</li>
+                        <li class="prize-list__item">Настройка и ведение рекламной кампании в сети Интернет</li>
+                        <li class="prize-list__item">Подготовка и размещение рекламного ролика на российском онлайн-сервисе для хостинга и просмотра видео</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section">
+        <div class="section__inner faq-wrap">
+            <h2 class="section__title">Вопросы</h2>
+            <div class="faq">
+                <details class="faq__item" open>
+                    <summary class="faq__question">
+                        <span>Кто может участвовать в конкурсе?</span>
+                        <span class="faq__icon">
+                        <img src="assets/down.svg" alt="Раскрыть" />
+                    </span>
+                    </summary>
+                    <div class="faq__answer">
+                        Участниками могут быть субъекты малого и среднего предпринимательства (МСП), зарегистрированные в Санкт-Петербурге, работающие в сфере креативных индустрий. Компании должны быть включены в реестр МСП и не находиться в процессе ликвидации или банкротства.
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">
+                        <span>Как правильно оформить презентацию бренда для заявки?</span>
+                        <span class="faq__icon">
+                        <img src="assets/down.svg" alt="Раскрыть" />
+                    </span>
+                    </summary>
+                    <div class="faq__answer">
+                        Презентация должна включать информацию о бренде, его истории, миссии, уникальных преимуществах, а также визуальные материалы: фото продукции, интерьеров, команды. Рекомендуемый формат - PDF или PowerPoint, объем не более 15 слайдов.
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">
+                        <span>Как проходит голосование?</span>
+                        <span class="faq__icon">
+                        <img src="assets/down.svg" alt="Раскрыть" />
+                    </span>
+                    </summary>
+                    <div class="faq__answer">
+                        Голосование проходит в два этапа: открытое онлайн-голосование на официальном сайте конкурса (50% итоговой оценки) и голосование конкурсной комиссии, состоящей из экспертов индустрии (50% итоговой оценки).
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">
+                        <span>До какого числа принимаются заявки?</span>
+                        <span class="faq__icon">
+                        <img src="assets/down.svg" alt="Раскрыть" />
+                    </span>
+                    </summary>
+                    <div class="faq__answer">
+                        Заявки принимаются до 21 октября 2025 года включительно. Результаты конкурса будут объявлены 11 ноября 2025 года на торжественной церемонии.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="organizers" class="section">
+        <div class="section__inner organizers-wrap">
+            <h2 class="section__title">Организаторы</h2>
+            <div class="organizers">
+                <div class="organizer-card">
+                    <div class="organizer-card__logo">
+                        <img src="assets/sup-1.svg" alt="Организатор 1" />
+                    </div>
+                </div>
+                <div class="organizer-card">
+                    <div class="organizer-card__logo">
+                        <img src="assets/sup-2.svg" alt="Организатор 2" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="contacts">
+
+    <div class="footer__bg" aria-hidden="true">
+        <img src="assets/footer-bg.png" alt="" />
+    </div>
+
+    <div class="footer__inner">
+        <div class="footer__card">
+
+            <div class="footer__organizer">
+                <div class="footer__logo">
+                    <img src="assets/logo-contest.svg" alt="Логотип конкурса" />
+                </div>
+                <div class="footer__label">Наименование организации</div>
+                <div class="footer__name">Фонд развития субъектов малого и среднего предпринимательства в Санкт-Петербурге</div>
+                <div class="footer__requisites">
+                    <span class="footer__requisites-item">ИНН 70000000</span>
+                    <span class="footer__requisites-item">КПП 70000000</span>
+                    <span class="footer__requisites-item">ОГРН 70000000</span>
+                </div>
+            </div>
+
+            <div class="footer__operator">
+
+                <div class="footer__operator-top">
+                    <div class="footer__operator-label">Оператор</div>
+                    <div class="footer__operator-name">ООО ЦРПИ</div>
+                    <div class="footer__requisites">
+                        <span class="footer__requisites-item">ИНН 7801341083</span>
+                        <span class="footer__requisites-item">КПП 780101001</span>
+                        <span class="footer__requisites-item">ОГРН 1177847379456</span>
+                    </div>
+                </div>
+
+                <div class="footer__operator-bottom">
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social">Фонд в VK</a>
+                        <a href="#" class="footer__social">Фонд в TG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div class="popup-overlay" id="application-popup">
+    <div class="popup">
+
+        <button class="popup__close" id="popupClose" aria-label="Закрыть">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <h2 class="popup__title">Подать заявку</h2>
+        <p class="popup__subtitle">Оставьте свою почту, и мы свяжемся с вами для оформления заявки</p>
+
+        <form class="popup__form" id="popupForm">
+            <div class="popup__field">
+                <input type="email" class="popup__input" id="popupEmail" placeholder="Введите ваш email" required />
+                <button type="submit" class="popup__submit" id="popupSubmit">Отправить</button>
+            </div>
+
+            <div class="popup__success" id="popupSuccess">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="22" stroke="#90FF0F" stroke-width="4"/>
+                    <path d="M14 24L20 30L34 16" stroke="#90FF0F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Успешно отправлено!</span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="popup-overlay" id="popup-conditions">
+    <div class="popup popup--conditions">
+        <button class="popup__close" aria-label="Закрыть">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <h2 class="popup__title">Условия участия</h2>
+
+        <div class="popup__content">
+            <div class="popup__conditions">
+                <div class="condition">
+                    <h3 class="condition__title">1. Общие положения</h3>
+                    <p class="condition__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="condition">
+                    <h3 class="condition__title">2. Требования к участникам</h3>
+                    <p class="condition__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="condition">
+                    <h3 class="condition__title">3. Порядок проведения</h3>
+                    <p class="condition__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+                <div class="condition">
+                    <h3 class="condition__title">4. Критерии оценки</h3>
+                    <p class="condition__text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </div>
+                <div class="condition">
+                    <h3 class="condition__title">5. Призы и награды</h3>
+                    <p class="condition__text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
